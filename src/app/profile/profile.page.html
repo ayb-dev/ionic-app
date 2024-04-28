@@ -1,0 +1,144 @@
+<ion-header >
+    <ion-row class="ion-align-items-center">
+      <ion-col>
+        <ion-title>My Profile</ion-title>
+      </ion-col>
+      <ion-col>
+        <div class="dropdown">
+          <button class="dropbtn"><i class="fa fa-cog"></i></button>
+          <div class="dropdown-content" style="right:0;">
+            <ion-button  fill="clear" [routerLink]="['/history']">
+              History
+            </ion-button>
+      
+            <ion-button  fill="clear" [routerLink]="['/changepass']">
+              Change Password
+            </ion-button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+</ion-header>
+
+<ion-content>
+
+  <ion-buttons class="ion-padding">
+    <i class="fa fa-money"></i>
+      <ion-select>
+       <ion-select-option value="option1"> GBP</ion-select-option>
+       <ion-select-option value="option2"> US DOLLAR</ion-select-option>
+       <ion-select-option value="option3"> Moroccan Dirham</ion-select-option>
+      </ion-select>
+  
+    <i class="fa fa-globe"></i>
+      <ion-select>
+       <ion-select-option value="option1"> English</ion-select-option>
+       <ion-select-option value="option2"> Arabic</ion-select-option>
+       <ion-select-option value="option3"> French</ion-select-option>
+      </ion-select>
+  </ion-buttons>
+ 
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>My Account Details</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div class="details">
+        <form>
+          <label for="fname">First Name</label>
+          <ion-input type="text" id="fname" name="firstname" Placeholder="Noha"></ion-input>
+      
+          <label for="lname">Last Name</label>
+          <ion-input type="text" id="lname" name="lastname" Placeholder="Bassouri"></ion-input>
+      
+          <label for="email">Email Address</label>
+          <ion-input type="text" id="email" name="email" Placeholder="Technician123@gmail.com"></ion-input>
+          
+        </form>
+      </div>
+    </ion-card-content>
+    <ion-button fill="clear">Edit</ion-button>
+  </ion-card>
+  
+  <ion-card color="medium">
+    <ion-card-header>
+      <ion-card-title>My Preferences</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <form>
+        <label for="transport">Transport</label>
+        <ion-input type="text" id="transport" name="transport" Placeholder="Coach"></ion-input>
+    
+        <label for="accomodation">Accomodation</label>
+        <ion-input type="text" id="accomodation" name="accomodation" Placeholder="Hotel"></ion-input>
+    
+        <label for="room">Room type</label>
+        <ion-input type="text" id="room" name="room" Placeholder="Double room"></ion-input>
+        
+        <label for="activities">Activities</label>
+        <ion-input type="text" id="activities" name="activities" Placeholder="Restaurants, Museums"></ion-input>
+        
+        <label for="num">Number of people</label>
+        <ion-input type="text" id="num" name="num" Placeholder="2 adults"></ion-input>
+        
+      </form>
+    </ion-card-content>
+    <ion-button fill="clear">Edit</ion-button>
+  </ion-card>
+  
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>Help</ion-card-title>
+      <ion-card-subtitle>Contact Us</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content> ContactGetAway&#64;gmail.com<br>
+                      +440000000000<br><br>
+                      <i class="fa fa-instagram"></i><span class="icon-space"></span>
+                      <i class="fa fa-twitter"></i><span class="icon-space"></span>
+                      <i class="fa fa-facebook"></i><span class="icon-space"></span>
+                      <i class="fa fa-youtube-play"></i>
+    </ion-card-content>
+
+    <ion-button fill="clear">Q&A</ion-button>
+  </ion-card>
+
+  <ion-button class="delete" id="click-trigger" color="danger">Delete Account</ion-button>
+   <ion-popover trigger="click-trigger" triggerAction="click" [dismissOnSelect]="true">
+    <ng-template>
+    <ion-content class="ion-padding">Are you sure you want to delete you account?<br>
+      <ion-button>Cancel</ion-button>
+      <ion-button [routerLink]="['/']">Delete</ion-button>
+    </ion-content>
+   </ng-template>
+  </ion-popover>
+
+  <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [routerLink]="['/main']">
+      <ion-icon src="assets/icon/earth-outline.svg"></ion-icon>
+      Discover
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/transport']">
+      <ion-icon src="assets/icon/airplane-outline.svg"></ion-icon>
+      Transport
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/accomodation']">
+      <ion-icon src="assets/icon/home-outline.svg"></ion-icon>
+      Stays
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/activity']">
+      <ion-icon src="assets/icon/flower-outline.svg"></ion-icon>
+      Activities
+    </ion-tab-button>
+    <ion-tab-button [routerLink]="['/booked']">
+      <ion-icon src="assets/icon/heart-outline.svg"></ion-icon>
+      GetAways
+    </ion-tab-button>
+  </ion-tab-bar>
+  </ion-tabs>
+
+  <ion-infinite-scroll ></ion-infinite-scroll>
+</ion-content>

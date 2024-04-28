@@ -1,0 +1,75 @@
+.dropdown {
+    float: right;
+}
+
+.dropdown button:hover {
+    background: #ccc;
+}
+
+.dropdown button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    color: rgb(57, 56, 56);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content ion-button{
+    color: rgb(3, 111, 72);
+    text-transform: none;
+    font-family: Amasis MT Pro;
+    font-size: 16px;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown-content {display: block;}
+
+ion-header {
+    color: white;
+    background-color: rgb(57, 56, 56);
+    font-family: Amasis MT Pro;
+}
+  
+ion-title {
+    font-size: 28px;
+}
+
+ion-popover ion-button{
+    color: rgb(3, 111, 72);
+    text-transform: none;
+}
+
+.getaway {
+    background-color: rgb(48, 142, 107);
+  color: white;
+}
+.getaway ion-card-title {
+    font-family: Amasis MT Pro;
+    font-size: 24px;
+}
+.getaway ion-button {
+    color: rgb(57, 56, 56);
+    float: right;
+    font-size: 20px;
+}
+.getaway ion-card-content {
+    font-size: 16px;
+}

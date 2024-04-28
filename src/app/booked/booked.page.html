@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row class="ion-align-items-center">
+      <ion-col><ion-title>My GetAways</ion-title></ion-col>
+      <ion-col size="2"><ion-buttons  fill="clear" [routerLink]="['/saved']"><i class="fa fa-heart"></i></ion-buttons></ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Booked</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/main']">
+        <ion-icon src="assets/icon/earth-outline.svg"></ion-icon>
+        Discover
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/transport']">
+        <ion-icon src="assets/icon/airplane-outline.svg"></ion-icon>
+        Transport
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/accomodation']">
+        <ion-icon src="assets/icon/home-outline.svg"></ion-icon>
+        Stays
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/activity']">
+        <ion-icon src="assets/icon/flower-outline.svg"></ion-icon>
+        Activities
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/booked']">
+        <ion-icon src="assets/icon/heart-outline.svg"></ion-icon>
+        GetAways
+      </ion-tab-button>
+    </ion-tab-bar>
+    </ion-tabs>
+
+  <ion-infinite-scroll ></ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,147 @@
+ <ion-header>
+  <ion-row class="ion-align-items-center">
+    <ion-col>
+      <ion-button fill="clear" [routerLink]="['/about']"><img src="assets/images/favicon.png" width="50" height="50" alt="image GetAway logo"></ion-button>
+    </ion-col>
+
+    <ion-col>
+      <ion-title>GetAway</ion-title>
+    </ion-col>
+
+    <ion-col>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-user"></i></button>
+        <div class="dropdown-content" style="right:0;">
+          <ion-button  fill="clear" [routerLink]="['/login']">
+            Sign In
+          </ion-button>
+    
+          <ion-button  fill="clear" [routerLink]="['/register']">
+            Register
+          </ion-button>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  </ion-header>
+  
+  <ion-content>
+    
+    <ion-buttons class="ion-padding">
+      <i class="fa fa-money"></i>
+        <ion-select>
+         <ion-select-option value="option1"> GBP</ion-select-option>
+         <ion-select-option value="option2"> US DOLLAR</ion-select-option>
+         <ion-select-option value="option3"> Moroccan Dirham</ion-select-option>
+        </ion-select>
+    
+      <i class="fa fa-globe"></i>
+        <ion-select>
+         <ion-select-option value="option1"> English</ion-select-option>
+         <ion-select-option value="option2"> Arabic</ion-select-option>
+         <ion-select-option value="option3"> French</ion-select-option>
+        </ion-select>
+    </ion-buttons>
+
+    <ion-searchbar placeholder="Where to.. How to.."></ion-searchbar>
+
+    <ion-card class="about">
+
+      <ion-card-header>
+        <ion-card-title>About Us </ion-card-title>
+        <ion-card-subtitle>Getaway: Your Passport to Adventure!</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Discover hidden gems, plan unforgettable trips, and embark on thrilling journeys with ease. Simply choose your destination, select your preferences, and let Getaway curate the perfect escape tailored just for you. It's time to explore the world and create memories that last a lifetime with Getaway! 
+      </ion-card-content>
+    
+      <ion-button fill="clear" [routerLink]="['/about']">More Details</ion-button>
+    </ion-card>
+    
+    <ion-card class="getaway">
+
+      <ion-card-header>
+        <ion-card-title>Customise Your GetAway </ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <ion-label>Destination</ion-label>
+            <ion-input type="text" placeholder="Choose a destination"></ion-input>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-checkbox labelPlacement="stacked">Random</ion-checkbox>
+          </ion-col>
+        </ion-row>
+      
+        <ion-row>
+          <ion-col>
+            <ion-label>Outbound Date</ion-label>
+            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+            <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime id="datetime" presentation="date"></ion-datetime>
+              </ng-template>
+            </ion-modal>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-checkbox labelPlacement="stacked">Random</ion-checkbox>
+          </ion-col>
+        </ion-row>
+      
+      <ion-select label="Vibe">
+        <ion-select-option value="option1"> Friends Trip</ion-select-option>
+        <ion-select-option value="option2"> Girls Trip</ion-select-option>
+        <ion-select-option value="option3"> Solo Trip</ion-select-option>
+       </ion-select>
+
+        <ion-select label="Occasion">
+          <ion-select-option value="option1"> Just Cuz</ion-select-option>
+          <ion-select-option value="option2"> Honeymoon</ion-select-option>
+          <ion-select-option value="option3"> Holidays</ion-select-option>
+         </ion-select>
+      
+      </ion-card-content>
+    
+      <ion-button fill="clear" [routerLink]="['/']">GetAway</ion-button>
+    </ion-card>
+
+    <ion-card class="transport">
+      <ion-card-header>
+        <ion-card-title><ion-icon src="assets/icon/airplane-outline.svg"></ion-icon> How to go..</ion-card-title>
+        <ion-card-subtitle>Plane, train, bus, car, ..</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content> View all the transport options to get to your destination comfortably and on your budget.</ion-card-content>
+    </ion-card>
+    
+    <ion-card class="stay">
+      <ion-card-header>
+        <ion-card-title><ion-icon src="assets/icon/home-outline.svg"></ion-icon> Where to stay..</ion-card-title>
+        <ion-card-subtitle>Hotels, Hostels, Airbnb, .. </ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content> View all the accomodation options available depending on your personnal preference. </ion-card-content>
+    </ion-card>
+    
+    <ion-card class="activity">
+      <ion-card-header>
+        <ion-card-title><ion-icon src="assets/icon/flower-outline.svg"></ion-icon> What to do..</ion-card-title>
+        <ion-card-subtitle>Tours, restaurants, activities, ..</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>View all the available activities and fun things to get the best experience and memories.  </ion-card-content>
+    </ion-card>
+
+  <ion-infinite-scroll ></ion-infinite-scroll>
+ </ion-content>
+
+
+
+
+

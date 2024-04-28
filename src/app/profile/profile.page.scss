@@ -1,0 +1,66 @@
+.dropdown {
+    float: right;
+}
+
+.dropdown button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 20px;
+    color: rgb(57, 56, 56);
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content ion-button{
+    color: rgb(3, 111, 72);
+    text-transform: none;
+    font-family: Amasis MT Pro;
+    font-size: 16px;
+}
+  
+.dropdown-content a:hover {background-color: #ddd;} 
+
+.dropdown:hover .dropdown-content {display: block;}
+
+ion-button {
+    color: rgb(3, 111, 72);
+    float: right;
+    font-size: 18px;
+}
+
+ion-header {
+    background-color: rgb(3, 111, 72);
+    color: white;
+    font-family: Amasis MT Pro;
+}
+
+ion-title {
+    font-size: 28px;
+}
+
+.icon-space {
+    margin-right: 10px;
+}
+
+.delete {
+    text-transform: none;
+    float: left;
+    padding-left: 100px;
+}

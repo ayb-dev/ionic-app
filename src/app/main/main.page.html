@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-row class="ion-align-items-center">
+    <ion-col>
+      <ion-button fill="clear" [routerLink]="['/about']"><img src="assets/images/favicon.png" width="50" height="50" alt="image GetAway logo"></ion-button>
+    </ion-col>
+
+    <ion-col>
+      <ion-title>GetAway</ion-title>
+    </ion-col>
+
+    <ion-col>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-user"></i></button>
+        <div class="dropdown-content" style="right:0;">
+          <ion-button  fill="clear" [routerLink]="['/profile']">
+            Profile
+          </ion-button>
+    
+          <ion-button fill="clear" id="click-trigger">Sign out</ion-button>
+            <ion-popover trigger="click-trigger" triggerAction="click" [dismissOnSelect]="true">
+             <ng-template>
+             <ion-content class="ion-padding">Are you sure you want to sign-out?<br>
+              <ion-button fill="clear">Cancel</ion-button>
+              <ion-button fill="clear" [routerLink]="['/']">Sign out</ion-button>
+             </ion-content>
+             </ng-template>
+           </ion-popover>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar placeholder="Where to.. How to.."></ion-searchbar>
+
+  <ion-card class="getaway">
+
+    <ion-card-header>
+      <ion-card-title>Customise Your GetAway </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-label>Destination</ion-label>
+          <ion-input type="text" placeholder="Choose a destination"></ion-input>
+        </ion-col>
+
+        <ion-col size="auto">
+          <ion-checkbox labelPlacement="stacked">Random</ion-checkbox>
+        </ion-col>
+      </ion-row>
+    
+      <ion-row>
+        <ion-col>
+          <ion-label>Outbound Date</ion-label>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="datetime" presentation="date"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+        </ion-col>
+
+        <ion-col size="auto">
+          <ion-checkbox labelPlacement="stacked">Random</ion-checkbox>
+        </ion-col>
+      </ion-row>
+    
+    <ion-select label="Vibe">
+      <ion-select-option value="option1"> Friends Trip</ion-select-option>
+      <ion-select-option value="option2"> Girls Trip</ion-select-option>
+      <ion-select-option value="option3"> Solo Trip</ion-select-option>
+     </ion-select>
+
+      <ion-select label="Occasion">
+        <ion-select-option value="option1"> Just Cuz</ion-select-option>
+        <ion-select-option value="option2"> Honeymoon</ion-select-option>
+        <ion-select-option value="option3"> Holidays</ion-select-option>
+       </ion-select>
+    
+    </ion-card-content>
+  
+    <ion-button fill="clear" [routerLink]="['/']">GetAway</ion-button>
+  </ion-card>
+  
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/main']">
+        <ion-icon src="assets/icon/earth-outline.svg"></ion-icon>
+        Discover
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/transport']">
+        <ion-icon src="assets/icon/airplane-outline.svg"></ion-icon>
+        Transport
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/accomodation']">
+        <ion-icon src="assets/icon/home-outline.svg"></ion-icon>
+        Stays
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/activity']">
+        <ion-icon src="assets/icon/flower-outline.svg"></ion-icon>
+        Activities
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/booked']">
+        <ion-icon src="assets/icon/heart-outline.svg"></ion-icon>
+        GetAways
+      </ion-tab-button>
+    </ion-tab-bar>
+    </ion-tabs>
+
+  <ion-infinite-scroll ></ion-infinite-scroll>
+</ion-content>
+
+
+
+
+
+

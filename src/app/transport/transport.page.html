@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Transport</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="transport">
+
+    <ion-card-header>
+      <ion-card-title>Find your Ride</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+          <ion-label>From:</ion-label>
+          <ion-input type="text" placeholder="Choose departure"></ion-input>
+       
+          <ion-label>To:</ion-label>
+          <ion-input type="text" placeholder="Choose destination"></ion-input>
+          
+          <ion-label>Outbound Date</ion-label>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="datetime"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+  
+          <ion-label>Return Date</ion-label>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="datetime"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+
+          <ion-select label="Passenger">
+            <ion-select-option value="option1"> 1</ion-select-option>
+            <ion-select-option value="option2"> 2</ion-select-option>
+            <ion-select-option value="option3"> 3</ion-select-option>
+            <ion-select-option value="option4"> 4</ion-select-option>
+            <ion-select-option value="option5"> 5</ion-select-option>
+            <ion-select-option value="option6"> 6</ion-select-option>
+            <ion-select-option value="option7"> 7</ion-select-option>
+          
+           </ion-select>
+    </ion-card-content>
+  
+    <ion-button fill="clear" [routerLink]="['/']">GetAway</ion-button>
+  </ion-card>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="['/main']">
+        <ion-icon src="assets/icon/earth-outline.svg"></ion-icon>
+        Discover
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/transport']">
+        <ion-icon src="assets/icon/airplane-outline.svg"></ion-icon>
+        Transport
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/accomodation']">
+        <ion-icon src="assets/icon/home-outline.svg"></ion-icon>
+        Stays
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/activity']">
+        <ion-icon src="assets/icon/flower-outline.svg"></ion-icon>
+        Activities
+      </ion-tab-button>
+      <ion-tab-button [routerLink]="['/booked']">
+        <ion-icon src="assets/icon/heart-outline.svg"></ion-icon>
+        GetAways
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+  <ion-infinite-scroll ></ion-infinite-scroll>
+</ion-content>
